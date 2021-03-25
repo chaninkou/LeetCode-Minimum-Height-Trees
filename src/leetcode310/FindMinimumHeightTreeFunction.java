@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.Set;
 
 public class FindMinimumHeightTreeFunction {
-	// O(n) speed and also O(n) space
+	// O(n) time and also O(n) space
 	public List<Integer> findMinHeightTrees(int n, int[][] edges) {
         if(n == 1){
             return Arrays.asList(0);
@@ -22,7 +22,7 @@ public class FindMinimumHeightTreeFunction {
             adjacent.add(new HashSet<Integer>());
         }
         
-        // Store each one
+        // Store each connection
         for(int[] edge : edges){
             adjacent.get(edge[0]).add(edge[1]);
             adjacent.get(edge[1]).add(edge[0]);
